@@ -6,7 +6,26 @@
     <description>Recent content in Posts on DeanHub</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 14 Aug 2023 19:37:05 +0800</lastBuildDate><atom:link href="http://kwanlung.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Aug 2023 23:41:45 +0800</lastBuildDate><atom:link href="http://kwanlung.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://kwanlung.github.io/posts/test/</link>
+      <pubDate>Thu, 17 Aug 2023 23:41:45 +0800</pubDate>
+      
+      <guid>http://kwanlung.github.io/posts/test/</guid>
+      <description>Niceeee</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://kwanlung.github.io/posts/firstpost/</link>
+      <pubDate>Thu, 17 Aug 2023 23:14:34 +0800</pubDate>
+      
+      <guid>http://kwanlung.github.io/posts/firstpost/</guid>
+      <description>This is Python Code
+print(&amp;#34;hello world&amp;#34;) </description>
+    </item>
+    
     <item>
       <title>DeanHub | Code | Debug | Development</title>
       <link>http://kwanlung.github.io/posts/mypost/</link>
