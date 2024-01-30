@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on DeanHub | Code Is Life</title>
-    <link>http://kwanlung.github.io/posts/</link>
-    <description>Recent content in Posts on DeanHub | Code Is Life</description>
+    <title>Java on DeanHub | Code Is Life</title>
+    <link>http://kwanlung.github.io/tags/java/</link>
+    <description>Recent content in Java on DeanHub | Code Is Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jan 2024 20:18:14 +0800</lastBuildDate><atom:link href="http://kwanlung.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jan 2024 20:18:14 +0800</lastBuildDate><atom:link href="http://kwanlung.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Blog Post</title>
       <link>http://kwanlung.github.io/posts/2024-01-30-first/</link>

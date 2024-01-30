@@ -6,34 +6,23 @@
     <description>Recent content on DeanHub | Code Is Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 17 Aug 2023 23:41:45 +0800</lastBuildDate><atom:link href="http://kwanlung.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jan 2024 20:19:55 +0800</lastBuildDate><atom:link href="http://kwanlung.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>http://kwanlung.github.io/posts/test/</link>
-      <pubDate>Thu, 17 Aug 2023 23:41:45 +0800</pubDate>
+      <title>My Fyp Project AI</title>
+      <link>http://kwanlung.github.io/projects/my-fyp-project-ai/</link>
+      <pubDate>Tue, 30 Jan 2024 20:19:55 +0800</pubDate>
       
-      <guid>http://kwanlung.github.io/posts/test/</guid>
-      <description>Niceeee</description>
+      <guid>http://kwanlung.github.io/projects/my-fyp-project-ai/</guid>
+      <description>Description and details about my Bachelor&amp;rsquo;s of Computer Science, Majoring in Software Engineering - I&amp;rsquo;m doing a facial expressino recognition system using CNN for depression detecion.</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://kwanlung.github.io/posts/firstpost/</link>
-      <pubDate>Thu, 17 Aug 2023 23:14:34 +0800</pubDate>
+      <title>My First Blog Post</title>
+      <link>http://kwanlung.github.io/posts/2024-01-30-first/</link>
+      <pubDate>Tue, 30 Jan 2024 20:18:14 +0800</pubDate>
       
-      <guid>http://kwanlung.github.io/posts/firstpost/</guid>
-      <description>This is Python Code
-print(&amp;#34;hello world&amp;#34;) </description>
-    </item>
-    
-    <item>
-      <title>DeanHub | Code | Debug | Development</title>
-      <link>http://kwanlung.github.io/posts/mypost/</link>
-      <pubDate>Mon, 14 Aug 2023 19:37:05 +0800</pubDate>
-      
-      <guid>http://kwanlung.github.io/posts/mypost/</guid>
-      <description>This is some Java Code
-public static void main(String[] args) { System.out.println(&amp;#34;Hello to DeanHub ! &amp;#34;); } </description>
+      <guid>http://kwanlung.github.io/posts/2024-01-30-first/</guid>
+      <description>public static void main(String[] args) { System.out.println(&amp;#34;Hello to DeanHub ! &amp;#34;); } </description>
     </item>
     
   </channel>

@@ -2,27 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://kwanlung.github.io/posts/test/</loc>
-    <lastmod>2023-08-17T23:41:45+08:00</lastmod>
-  </url><url>
     <loc>http://kwanlung.github.io/</loc>
-    <lastmod>2023-08-17T23:41:45+08:00</lastmod>
+    <lastmod>2024-01-30T20:19:55+08:00</lastmod>
   </url><url>
-    <loc>http://kwanlung.github.io/posts/</loc>
-    <lastmod>2023-08-17T23:41:45+08:00</lastmod>
-  </url><url>
-    <loc>http://kwanlung.github.io/posts/firstpost/</loc>
-    <lastmod>2023-08-17T23:14:34+08:00</lastmod>
-  </url><url>
-    <loc>http://kwanlung.github.io/posts/mypost/</loc>
-    <lastmod>2023-08-14T19:37:05+08:00</lastmod>
-  </url><url>
-    <loc>http://kwanlung.github.io/about/</loc>
-  </url><url>
-    <loc>http://kwanlung.github.io/posts/</loc>
+    <loc>http://kwanlung.github.io/projects/my-fyp-project-ai/</loc>
+    <lastmod>2024-01-30T20:19:55+08:00</lastmod>
   </url><url>
     <loc>http://kwanlung.github.io/projects/</loc>
+    <lastmod>2024-01-30T20:19:55+08:00</lastmod>
+  </url><url>
+    <loc>http://kwanlung.github.io/tags/java/</loc>
+    <lastmod>2024-01-30T20:18:14+08:00</lastmod>
+  </url><url>
+    <loc>http://kwanlung.github.io/posts/2024-01-30-first/</loc>
+    <lastmod>2024-01-30T20:18:14+08:00</lastmod>
+  </url><url>
+    <loc>http://kwanlung.github.io/posts/</loc>
+    <lastmod>2024-01-30T20:18:14+08:00</lastmod>
   </url><url>
     <loc>http://kwanlung.github.io/tags/</loc>
+    <lastmod>2024-01-30T20:18:14+08:00</lastmod>
+  </url><url>
+    <loc>http://kwanlung.github.io/about/</loc>
+    <lastmod>2024-01-30T20:15:49+08:00</lastmod>
+  </url><url>
+    <loc>http://kwanlung.github.io/projects/</loc>
   </url>
 </urlset>
