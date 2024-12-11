@@ -5,16 +5,6 @@
     <link>http://kwanlung.github.io/projects/</link>
     <description>Recent content in Projects on DeanHub | Code Is Life</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 30 Jan 2024 20:19:55 +0800</lastBuildDate><atom:link href="http://kwanlung.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My Fyp Project AI</title>
-      <link>http://kwanlung.github.io/projects/my-fyp-project-ai/</link>
-      <pubDate>Tue, 30 Jan 2024 20:19:55 +0800</pubDate>
-      
-      <guid>http://kwanlung.github.io/projects/my-fyp-project-ai/</guid>
-      <description>Description and details about my Bachelor&amp;rsquo;s of Computer Science, Majoring in Software Engineering - I&amp;rsquo;m doing a facial expressino recognition system using CNN for depression detecion.</description>
-    </item>
-    
+    <language>en</language><atom:link href="http://kwanlung.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
