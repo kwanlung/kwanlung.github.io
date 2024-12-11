@@ -155,7 +155,7 @@
             </span>
             <span class="reading-time">
               <i class="fa fa-clock-o" aria-hidden="true"></i>
-              One-minute read
+              3-minute read
             </span>
           </div>
           
@@ -174,7 +174,170 @@
         <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Hello to DeanHub ! &#34;</span><span class="o">);</span> 
 </span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><p>The statement <code>public static void main(String[] args){System.out.println(&quot;Hello World&quot;);}</code> is a fundamental piece of Java code. It represents the entry point for any Java application. Let’s break it down in detail:</p>
+<hr>
+<h3 id="1-public">
+  1. <strong>public</strong>
+  <a class="heading-link" href="#1-public">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Meaning</strong>: The <code>public</code> keyword indicates that the method is accessible from anywhere in the program.</li>
+<li><strong>Why it&rsquo;s needed</strong>: Since the Java Virtual Machine (JVM) needs to invoke the <code>main</code> method to start the program, the method must be declared as <code>public</code>. If it&rsquo;s not <code>public</code>, the JVM will not be able to access it, and an error will occur.</li>
+</ul>
+<hr>
+<h3 id="2-static">
+  2. <strong>static</strong>
+  <a class="heading-link" href="#2-static">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Meaning</strong>: The <code>static</code> keyword means that the method belongs to the class rather than an instance of the class.</li>
+<li><strong>Why it&rsquo;s needed</strong>: The JVM invokes the <code>main</code> method without creating an object of the class. Declaring <code>main</code> as <code>static</code> ensures that the JVM can call it directly using the class name.</li>
+</ul>
+<hr>
+<h3 id="3-void">
+  3. <strong>void</strong>
+  <a class="heading-link" href="#3-void">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Meaning</strong>: The <code>void</code> keyword specifies that the <code>main</code> method does not return any value.</li>
+<li><strong>Why it&rsquo;s needed</strong>: The <code>main</code> method serves as the starting point for the program and doesn’t need to return any value to the JVM.</li>
+</ul>
+<hr>
+<h3 id="4-main">
+  4. <strong>main</strong>
+  <a class="heading-link" href="#4-main">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Meaning</strong>: <code>main</code> is the name of the method that the JVM looks for when starting a Java program.</li>
+<li><strong>Why it&rsquo;s needed</strong>: This is a convention in Java, and it is pre-defined in the language specification. The JVM looks specifically for a method named <code>main</code> with the exact signature as defined.</li>
+</ul>
+<hr>
+<h3 id="5-string-args">
+  5. <strong>String[] args</strong>
+  <a class="heading-link" href="#5-string-args">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Meaning</strong>:
+<ul>
+<li><code>String[]</code> indicates that the method takes an array of <code>String</code> objects as its parameter.</li>
+<li><code>args</code> is the name of the parameter (it can be renamed, e.g., to <code>arguments</code> or <code>params</code>).</li>
+</ul>
+</li>
+<li><strong>Why it&rsquo;s needed</strong>:
+<ul>
+<li>This parameter allows the program to accept command-line arguments.</li>
+<li>For example, if you run the program with <code>java MyClass arg1 arg2</code>, the <code>args</code> array will contain <code>[&quot;arg1&quot;, &quot;arg2&quot;]</code>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="6-systemoutprintlnhello-world">
+  6. <strong>System.out.println(&ldquo;Hello World&rdquo;);</strong>
+  <a class="heading-link" href="#6-systemoutprintlnhello-world">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>
+<p><strong>System</strong>: A class provided by Java’s core library.</p>
+</li>
+<li>
+<p><strong>out</strong>: A static member of the <code>System</code> class, which is an instance of <code>PrintStream</code>. It is used to send output to the console.</p>
+</li>
+<li>
+<p><strong>println</strong>: A method of the <code>PrintStream</code> class that prints the argument passed to it followed by a newline character.</p>
+</li>
+<li>
+<p><strong>Output</strong>: This line prints the message <code>&quot;Hello World&quot;</code> to the console. When executed, the console will display:</p>
+<pre tabindex="0"><code>Hello World
+</code></pre></li>
+</ul>
+<hr>
+<h3 id="how-it-works-together">
+  How It Works Together
+  <a class="heading-link" href="#how-it-works-together">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>The JVM starts by looking for the <code>main</code> method in the specified class.</li>
+<li>The <code>main</code> method is executed as the entry point.</li>
+<li>The <code>System.out.println(&quot;Hello World&quot;);</code> line is executed, printing the string to the console.</li>
+</ol>
+<hr>
+<h3 id="full-explanation-of-syntax-and-execution">
+  Full Explanation of Syntax and Execution
+  <a class="heading-link" href="#full-explanation-of-syntax-and-execution">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Hello World&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><ol>
+<li>
+<p><strong>Compilation</strong>:</p>
+<ul>
+<li>Save the file as <code>HelloWorld.java</code>.</li>
+<li>Compile the program using <code>javac HelloWorld.java</code>. This generates a <code>HelloWorld.class</code> file.</li>
+</ul>
+</li>
+<li>
+<p><strong>Execution</strong>:</p>
+<ul>
+<li>Run the program using <code>java HelloWorld</code>. The JVM will execute the <code>main</code> method.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="key-points">
+  Key Points
+  <a class="heading-link" href="#key-points">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Signature</strong>: The <code>main</code> method must have the exact signature <code>public static void main(String[] args)</code> for the JVM to recognize it as the starting point.</li>
+<li><strong>Command-Line Arguments</strong>: You can access <code>args</code> to customize the program&rsquo;s behavior based on input provided during execution.</li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">(</span><span class="n">args</span><span class="o">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="n">0</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Hello, &#34;</span> <span class="o">+</span> <span class="n">args</span><span class="o">[</span><span class="n">0</span><span class="o">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Hello World&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>Run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">java HelloWorld Alice
+</span></span></code></pre></div><p>Output:</p>
+<pre tabindex="0"><code>Hello, Alice
+</code></pre><hr>
+<p>This basic structure ensures that every Java program starts in a standardized and predictable way.</p>
+
       </div>
 
 

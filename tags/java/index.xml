@@ -13,7 +13,8 @@
       <pubDate>Tue, 30 Jan 2024 20:18:14 +0800</pubDate>
       
       <guid>http://kwanlung.github.io/posts/2024-01-30-first/</guid>
-      <description>public static void main(String[] args) { System.out.println(&amp;#34;Hello to DeanHub ! &amp;#34;); } </description>
+      <description>public static void main(String[] args) { System.out.println(&amp;#34;Hello to DeanHub ! &amp;#34;); } The statement public static void main(String[] args){System.out.println(&amp;quot;Hello World&amp;quot;);} is a fundamental piece of Java code. It represents the entry point for any Java application. Let’s break it down in detail:
+1. public Link to heading Meaning: The public keyword indicates that the method is accessible from anywhere in the program. Why it&amp;rsquo;s needed: Since the Java Virtual Machine (JVM) needs to invoke the main method to start the program, the method must be declared as public.</description>
     </item>
     
   </channel>

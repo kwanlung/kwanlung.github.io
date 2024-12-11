@@ -6,14 +6,26 @@
     <description>Recent content in Posts on DeanHub | Code Is Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jan 2024 20:18:14 +0800</lastBuildDate><atom:link href="http://kwanlung.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Dec 2024 13:22:51 +0800</lastBuildDate><atom:link href="http://kwanlung.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Life Lessons</title>
+      <link>http://kwanlung.github.io/posts/life_blog/</link>
+      <pubDate>Wed, 11 Dec 2024 13:22:51 +0800</pubDate>
+      
+      <guid>http://kwanlung.github.io/posts/life_blog/</guid>
+      <description>Life Lessons Link to heading Always Remember to Live in the Present
+Shi Tiesheng once wrote:
+“When I was healthy and whole, I often complained about the poor environment around me. After I became paralyzed, I yearned for the days when I could walk and run. A few years later, when I developed bedsores, I missed the time I could sit comfortably in a wheelchair. Later, when I was diagnosed with kidney failure, I longed for the days with just bedsores.</description>
+    </item>
+    
     <item>
       <title>My First Blog Post</title>
       <link>http://kwanlung.github.io/posts/2024-01-30-first/</link>
       <pubDate>Tue, 30 Jan 2024 20:18:14 +0800</pubDate>
       
       <guid>http://kwanlung.github.io/posts/2024-01-30-first/</guid>
-      <description>public static void main(String[] args) { System.out.println(&amp;#34;Hello to DeanHub ! &amp;#34;); } </description>
+      <description>public static void main(String[] args) { System.out.println(&amp;#34;Hello to DeanHub ! &amp;#34;); } The statement public static void main(String[] args){System.out.println(&amp;quot;Hello World&amp;quot;);} is a fundamental piece of Java code. It represents the entry point for any Java application. Let’s break it down in detail:
+1. public Link to heading Meaning: The public keyword indicates that the method is accessible from anywhere in the program. Why it&amp;rsquo;s needed: Since the Java Virtual Machine (JVM) needs to invoke the main method to start the program, the method must be declared as public.</description>
     </item>
     
   </channel>
