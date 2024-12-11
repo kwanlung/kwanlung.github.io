@@ -1,0 +1,39 @@
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+
+# Logs
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+
+# Build directories
+/out/
+build/
+target/
+
+# Dependency caches
+*.class
+*.jar
+*.war
+
+# Node modules (if applicable)
+node_modules/
+
+# Generated files
+/public/
+
+# Hugo generated files
+resources/_gen/
+hugo_stats.json
+
+# Other files
+*.lock
