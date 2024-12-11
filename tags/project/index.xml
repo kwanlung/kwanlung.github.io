@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on DeanHub | Code Is Life</title>
-    <link>http://kwanlung.github.io/projects/</link>
-    <description>Recent content in Projects on DeanHub | Code Is Life</description>
+    <title>Project on DeanHub | Code Is Life</title>
+    <link>http://kwanlung.github.io/tags/project/</link>
+    <description>Recent content in Project on DeanHub | Code Is Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Dec 2024 20:26:19 +0800</lastBuildDate><atom:link href="http://kwanlung.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Dec 2024 20:26:19 +0800</lastBuildDate><atom:link href="http://kwanlung.github.io/tags/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Project</title>
       <link>http://kwanlung.github.io/projects/ai-project/</link>
