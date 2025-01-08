@@ -5,6 +5,16 @@
     <link>http://kwanlung.github.io/projects/</link>
     <description>Recent content in Projects on DeanHub | Code Is Life</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://kwanlung.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Wed, 08 Jan 2025 15:00:29 +0800</lastBuildDate><atom:link href="http://kwanlung.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fyp Ai Project</title>
+      <link>http://kwanlung.github.io/projects/fyp-ai-project/</link>
+      <pubDate>Wed, 08 Jan 2025 15:00:29 +0800</pubDate>
+      
+      <guid>http://kwanlung.github.io/projects/fyp-ai-project/</guid>
+      <description>In my Final Year Project, I was doing facial expression recognition AI to detect depression.</description>
+    </item>
+    
   </channel>
 </rss>
