@@ -34,3 +34,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./kwanlung_blog/public
+        env:
+          # ✅ Tell GitHub this workflow is for GitHub Pages
+          GITHUB_ENV: github-pages
