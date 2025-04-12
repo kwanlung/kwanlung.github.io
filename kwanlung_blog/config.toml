@@ -1,0 +1,53 @@
+baseURL = 'https://github.com/kwanlung/kwanlung.github.io/'
+languageCode = 'en-us'
+title = 'DeanHub | Code Is Life'
+theme = "PaperMod"
+enableEmoji = true
+
+[params]
+  ShowReadingTime = true
+  ShowShareButtons = true
+  showArchive = true
+
+  [params.profileMode]
+    enabled = true
+    title = "Dean Ng Kwan Lung"
+    subtitle = " Dean's Code | Explore | Learn "
+    imageUrl = "C:/Users/Acer/Desktop/GITHUB_DEAN/kwanlung.github.io/kwanlung_blog/static/deanicontransparent.jpeg" # Place your profile image in 'static/images/'
+    imageTitle = "Profile Image"
+    imageWidth = 120
+    imageHeight = 120
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/kwanlung"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/deanng00/"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "archive"
+    name = "Archive"
+    url = "/archives/"
+    weight = 4
