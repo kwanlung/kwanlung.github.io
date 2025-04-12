@@ -33,7 +33,7 @@ jobs:
         run: hugo --minify --source kwanlung_blog
 
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v1
         with:
           path: kwanlung_blog/public
 
