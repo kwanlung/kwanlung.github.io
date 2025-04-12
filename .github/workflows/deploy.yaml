@@ -6,9 +6,13 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -26,14 +30,21 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build Hugo site
+      - name: Build site
         run: hugo --minify --source kwanlung_blog
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./kwanlung_blog/public
-    # ✅ This line links the deploy job to GitHub Pages environment!
+          path: ./kwanlung_blog/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
