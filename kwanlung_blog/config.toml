@@ -1,4 +1,4 @@
-baseURL = 'https://github.com/kwanlung/kwanlung.github.io/'
+baseURL = 'https://kwanlung.github.io/'
 languageCode = 'en-us'
 title = 'DeanHub | Code Is Life'
 theme = "PaperMod"
@@ -13,7 +13,7 @@ enableEmoji = true
     enabled = true
     title = "Dean Ng Kwan Lung"
     subtitle = " Dean's Code | Explore | Learn "
-    imageUrl = "C:/Users/Acer/Desktop/GITHUB_DEAN/kwanlung.github.io/kwanlung_blog/static/deanicontransparent.jpeg" # Place your profile image in 'static/images/'
+    imageUrl = "images/deanicontransparent.jpeg" # Place your profile image in 'static/images/'
     imageTitle = "Profile Image"
     imageWidth = 120
     imageHeight = 120
@@ -25,6 +25,14 @@ enableEmoji = true
   [[params.socialIcons]]
     name = "linkedin"
     url = "https://www.linkedin.com/in/deanng00/"
+
+  [params.assets]
+  favicon = "favicon.ico"
+  favicon32x32 = "favicon-32x32.png"
+  apple_touch_icon = "apple-touch-icon.png"
+  theme_color = "#1a1a1a"
+  msapplication_TileColor = "#1a1a1a"
+
 
 [menu]
 
