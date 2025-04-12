@@ -34,10 +34,10 @@ jobs:
         run: hugo --minify --source kwanlung_blog
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-pages-artifact@v1
         with:
-          name: github-pages               # <-- This is required!
-          path: ./kwanlung_blog/public     # <-- Adjust if you changed folder
+          name: github-pages
+          path: kwanlung_blog/public
 
   deploy:
     needs: build
