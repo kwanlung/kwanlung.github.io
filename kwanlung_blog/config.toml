@@ -4,6 +4,8 @@ title = 'DeanHub | Code Is Life'
 theme = "PaperMod"
 enableEmoji = true
 
+mainSections = ["posts", "project"]
+
 [params]
   ShowReadingTime = true
   ShowShareButtons = true
@@ -49,13 +51,19 @@ enableEmoji = true
     weight = 2
 
   [[menu.main]]
+    identifier = "project"
+    name = "Projects"
+    url = "/project/"
+    weight = 3
+
+  [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
-    weight = 3
+    weight = 4
 
   [[menu.main]]
     identifier = "archive"
     name = "Archive"
     url = "/archives/"
-    weight = 4
+    weight = 5
