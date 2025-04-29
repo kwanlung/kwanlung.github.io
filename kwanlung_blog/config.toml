@@ -28,6 +28,27 @@ mainSections = ["posts", "project"]
     name = "linkedin"
     url = "https://www.linkedin.com/in/deanng00/"
 
+  [[params.socialIcons]]
+    name = "Twitter"
+    url = "https://x.com/DEANi18015616"
+
+  [[params.socialIcons]]
+  name = "Instagram"
+  url = "https://www.instagram.com/nkwanlungggg/"
+
+  [[params.socialIcons]]
+  name = "Kaggle"
+  url = "https://www.kaggle.com/kwanlungng"
+
+  [[params.socialIcons]]
+  name = "email"
+  url = "mailto:kwanlung123@gmail.com"
+
+  [[params.socialIcons]]
+  name = "cv"
+  url = "/resume/Resume Dean Ng Kwan Lung.pdf"
+
+
   [params.assets]
   favicon = "favicon.ico"
   favicon32x32 = "favicon-32x32.png"
