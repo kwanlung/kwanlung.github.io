@@ -10,6 +10,9 @@ mainSections = ["posts", "project"]
   ShowReadingTime = true
   ShowShareButtons = true
   showArchive = true
+  ShowToc = true
+  TocOpen = true
+  math = true
 
   [params.profileMode]
     enabled = true
