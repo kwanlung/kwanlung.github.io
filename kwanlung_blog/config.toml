@@ -49,7 +49,7 @@ mainSections = ["posts", "project"]
 
   [[params.socialIcons]]
   name = "cv"
-  url = "/resume/Resume Dean Ng Kwan Lung.pdf"
+  url = "/resume/DeanNgKwanLung-SoftwareEngineer.pdf"
 
 
   [params.assets]
