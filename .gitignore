@@ -1,2 +1,8 @@
 # Ignore Hugo build output
 kwanlung_blog/public/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
