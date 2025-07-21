@@ -33,6 +33,64 @@ Build and deploy a robust 7-class facial expression recognition system capable o
 
 ---
 
+# 🖼️ Image Processing & Embedding Systems
+
+To enable high-performing ViT-based emotion classification, the system depends heavily on rigorous image processing and efficient visual embedding strategies.
+
+### 📦 Preprocessing Pipeline
+Each image undergoes a well-designed set of operations:
+
+- **Face Region Isolation:** All datasets are either pre-aligned (RAF-DB, AffectNet) or assume center-cropped faces.
+
+#### 📌 Transformations Applied (PyTorch)
+Training augmentations were applied via `torchvision.transforms`, using the following logic:
+
+- **Resize:** All images resized to 224x224 (ViT input)
+- **Random Horizontal Flip:** Helps the model generalize across left/right facial symmetry
+- **Random Rotation (±10°):** Adds rotation invariance, useful for slightly tilted faces
+- **Color Jitter:** Adjusts brightness, contrast, and saturation for lighting diversity
+- **Normalization:** Converts RGB to standardized values in range `[-1, 1]`
+
+<details>
+<summary>PyTorch Implementation</summary>
+
+```python
+transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.ColorJitter(...),
+    transforms.RandomHorizontalFlip(),
+    transforms.ToTensor(),
+    transforms.Normalize([0.5]*3, [0.5]*3)
+])
+```
+</details>
+
+#### ✂️ CutMix Augmentation
+Beyond traditional transforms, I integrated CutMix, a powerful augmentation technique that:
+
+- Cuts a patch from one image and pastes it into another
+
+- Mixes the labels proportionally
+
+- Helps the model learn spatial invariance and improves generalization under occlusion or noise
+
+This was particularly effective for small classes like fear and disgust.
+
+> CutMix is especially useful when training ViTs, as they handle global patterns better than CNNs and benefit more from mixed-structure inputs.
+
+
+### 🧠 Embedding System: Vision Transformer
+
+- The input image is embedded into a patch-level sequence using `patch_size=16`.
+
+- Each patch is linearly projected and positional embeddings are added before being fed into the transformer encoder.
+
+- Outputs are globally pooled and passed into a linear classification head.
+
+ViT thus converts `(B, 3, 224, 224)` into a sequence `(B, N_patches, D)` which is finally pooled into `(B, D)` before classification.
+
+---
+
 # 🏗️ Dataset Engineering
 Effective data handling was crucial to the project's success. Typical facial expression recognition (FER) datasets suffer from noise, inconsistencies, and imbalance. I tackled these issues directly:
 
@@ -72,7 +130,7 @@ uvicorn app:app --host localhost --port 8000 --reload
 ---
 
 # Ⓜ️ Model
-[Hugging Face Facial Expression Recognition ViT-Tiny](https://huggingface.co/deanngkl/vit-tiny-fer)
+[ViT-Tiny FER @ Hugging Face](https://huggingface.co/deanngkl/vit-tiny-fer)
 
 ---
 
