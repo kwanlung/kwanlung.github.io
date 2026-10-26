@@ -1,0 +1,62 @@
+name: AstroPaper build check
+
+on:
+  push:
+    branches:
+      - astro-paper-migration
+    paths:
+      - "astro-site/**"
+      - ".github/workflows/astro-paper-check.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "astro-site/**"
+      - ".github/workflows/astro-paper-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: astro-paper-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+          cache-dependency-path: astro-site/pnpm-lock.yaml
+
+      - name: Install dependencies
+        working-directory: astro-site
+        run: pnpm install --frozen-lockfile
+
+      - name: Check post generator syntax
+        working-directory: astro-site
+        run: node --check scripts/new-post.mjs
+
+      - name: Type-check and build site
+        working-directory: astro-site
+        run: pnpm build
+
+      - name: Upload build for inspection (no deployment)
+        uses: actions/upload-artifact@v4
+        with:
+          name: astropaper-build
+          path: astro-site/dist
+          if-no-files-found: error
+          retention-days: 7
