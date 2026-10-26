@@ -50,4 +50,4 @@ The first post is enabled in the migration preview so the Posts and Tags pages h
 
 ## Deployment safety
 
-The current production workflow still builds the Hugo site from `kwanlung_blog/`. The Astro workflow initially performs a build check only and does not publish to GitHub Pages. See [DEPLOYMENT.md](DEPLOYMENT.md) for the planned cutover steps.
+The live `main` branch still serves the Hugo site until this migration PR is merged. This branch includes the AstroPaper production workflow; after merge, a push to `main` will build `astro-site/` and deploy it to GitHub Pages. The separate AstroPaper build-check workflow validates the theme but never deploys. See [DEPLOYMENT.md](DEPLOYMENT.md) before the cutover.
