@@ -13,7 +13,7 @@
 2. Run `pnpm install`, `pnpm build`, and `pnpm preview` locally from `astro-site/`.
 3. Review the homepage, theme switching, search, article pages, tags, archives, RSS, sitemap, and mobile layout.
 4. Decide which Hugo posts and project pages to migrate. Keep the old Hugo source and the `main` branch history intact.
-5. Review the first article and remove `draft: true` only when it is ready to publish.
+5. Review the first article before production. It is currently enabled in the migration preview; set `draft: true` again if it should remain unpublished when the production workflow is switched.
 6. Make a separate reviewed change to the production deployment workflow so it builds `astro-site/` and uploads `astro-site/dist/` as the Pages artifact.
 7. In GitHub repository **Settings → Pages**, confirm the source is **GitHub Actions**.
 8. Merge the production cutover only after the build passes and you are ready to replace the public homepage.
