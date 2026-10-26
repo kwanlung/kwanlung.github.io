@@ -45,6 +45,10 @@ jobs:
         working-directory: astro-site
         run: pnpm install --frozen-lockfile
 
+      - name: Check post generator syntax
+        working-directory: astro-site
+        run: node --check scripts/new-post.mjs
+
       - name: Type-check and build site
         working-directory: astro-site
         run: pnpm build
