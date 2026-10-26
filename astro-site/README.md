@@ -34,7 +34,7 @@ pnpm preview
 - Colour tokens: `src/styles/theme.css`
 - Static assets: `public/`
 
-The first post is deliberately marked `draft: true`; it will not be publicly listed until it has been reviewed and the draft flag is removed.
+The first post is enabled in the migration preview so the Posts and Tags pages have real content. Review it before any production deployment; set `draft: true` again if you want to keep it out of public listings.
 
 ## Deployment safety
 
