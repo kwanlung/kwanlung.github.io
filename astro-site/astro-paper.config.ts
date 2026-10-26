@@ -29,9 +29,41 @@ export default defineAstroPaperConfig({
     search: "pagefind",
   },
   socials: [
-    { name: "github", url: "https://github.com/kwanlung" },
-    { name: "linkedin", url: "https://www.linkedin.com/in/deanng00/" },
-    { name: "mail", url: "mailto:kwanlung123@gmail.com" },
+    {
+      name: "github",
+      url: "https://github.com/kwanlung",
+      linkTitle: "Dean on GitHub — code and projects",
+    },
+    {
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/deanng00/",
+      linkTitle: "Connect with Dean on LinkedIn",
+    },
+    {
+      name: "kaggle",
+      url: "https://www.kaggle.com/kwanlungng",
+      linkTitle: "Dean on Kaggle — data science notebooks",
+    },
+    {
+      name: "x",
+      url: "https://x.com/DEANi18015616",
+      linkTitle: "Dean on X",
+    },
+    {
+      name: "cv",
+      url: "/resume/DeanNgKwanLung-SoftwareEngineer.pdf",
+      linkTitle: "View Dean's résumé (PDF)",
+    },
+    {
+      name: "mail",
+      url: "mailto:kwanlung123@gmail.com",
+      linkTitle: "Email Dean",
+    },
+    {
+      name: "instagram",
+      url: "https://www.instagram.com/nkwanlungggg/",
+      linkTitle: "Dean on Instagram — personal interests and travel",
+    },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },
