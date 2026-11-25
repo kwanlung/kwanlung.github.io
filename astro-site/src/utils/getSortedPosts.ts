@@ -6,10 +6,15 @@ import { postFilter } from "./postFilter";
  * descending (uses `modDatetime` when present, otherwise `pubDatetime`).
  *
  * Note: filtering respects drafts and scheduled posts via `postFilter()`.
+ * `includeDrafts` skips that filter so dev-only draft preview routes can
+ * sort unfiltered entries; listings must never set it.
  */
-export function getSortedPosts(posts: CollectionEntry<"posts">[]) {
+export function getSortedPosts(
+  posts: CollectionEntry<"posts">[],
+  options?: { includeDrafts?: boolean }
+) {
   return posts
-    .filter(postFilter)
+    .filter(post => options?.includeDrafts || postFilter(post))
     .sort(
       (a, b) =>
         Math.floor(

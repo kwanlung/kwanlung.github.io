@@ -9,12 +9,22 @@ type Props = {
   canonicalURL?: string;
   pubDatetime?: Date;
   modDatetime?: Date | null;
+  alternates?: { hreflang: string; href: string }[];
 };
 
 const { site } = config;
 
-const { title, description, ogImage, canonicalURL, pubDatetime, modDatetime } =
-  Astro.props;
+const {
+  title,
+  description,
+  ogImage,
+  canonicalURL,
+  pubDatetime,
+  modDatetime,
+  alternates = [],
+} = Astro.props;
+
+const locale = Astro.currentLocale ?? config.site.lang;
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -37,6 +47,20 @@ const structuredData = {
   <Fragment slot="head">
     <!-- Override og:type for article pages -->
     <meta property="og:type" content="article" />
+
+    {
+      alternates.map(({ hreflang, href }) => (
+        <link rel="alternate" hreflang={hreflang} href={href} />
+      ))
+    }
+    {
+      alternates.length > 0 && (
+        <meta
+          property="og:locale:alternate"
+          content={locale === "zh" ? "en_US" : "zh_CN"}
+        />
+      )
+    }
 
     {
       pubDatetime && (
