@@ -32,6 +32,11 @@ export default {
     featured: "Featured",
     recentPosts: "Recent Posts",
     allPosts: "All Posts",
+    heroTitle: "Hi, I'm Dean.",
+    heroIntro:
+      "I'm a software engineer curious about how technology and the world work. This notebook is where I document what I learn, the projects I build, and the ideas I want to understand more deeply.",
+    heroIntro2:
+      "I write about backend engineering and AI, finance and economics, life and reflection, and the process of building a meaningful career. The goal is simple: learn consistently, think clearly, and turn ideas into action.",
   },
   footer: {
     copyright: "Copyright",
@@ -62,6 +67,7 @@ export default {
     noResults: "No results found",
     goToPreviousPage: "Go to previous page",
     goToNextPage: "Go to next page",
+    switchLanguage: "Switch language",
   },
   notFound: {
     title: "404 Not Found",

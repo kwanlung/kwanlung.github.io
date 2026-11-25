@@ -27,7 +27,7 @@ const socialImageURL = new URL(ogImage, Astro.site ?? Astro.url);
 const rssHref = getRelativeLocaleUrl(
   Astro.currentLocale ?? config.site.lang,
   "rss.xml"
-);
+).replace(/\/$/, "");
 ---
 
 <!doctype html>
@@ -64,6 +64,10 @@ const rssHref = getRelativeLocaleUrl(
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImageURL} />
+    <meta
+      property="og:locale"
+      content={(Astro.currentLocale ?? site.lang) === "zh" ? "zh_CN" : "en_US"}
+    />
 
     <!-- Twitter / X -->
     <meta property="twitter:card" content="summary_large_image" />
