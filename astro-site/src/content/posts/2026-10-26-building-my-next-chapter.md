@@ -8,6 +8,8 @@ tags:
   - learning
   - career
 draft: false
+lang: en
+translationKey: building-my-next-chapter
 ---
 
 ## Why start again?
