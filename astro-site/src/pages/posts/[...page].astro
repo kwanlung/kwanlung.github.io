@@ -1,6 +1,7 @@
 ---
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
@@ -9,18 +10,28 @@ import Card from "@/components/Card.astro";
 import Footer from "@/components/Footer.astro";
 import Pagination from "@/components/Pagination.astro";
 import { getSortedPosts } from "@/utils/getSortedPosts";
+import { getLocalePage } from "@/utils/getLocalePage";
+import { postFilter } from "@/utils/postFilter";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const posts = await getCollection("posts", ({ data }) => !data.draft);
+  const posts = await getCollection(
+    "posts",
+    p => postFilter(p) && p.data.lang === config.site.lang
+  );
   return paginate(getSortedPosts(posts), { pageSize: config.posts.perPage });
 }) satisfies GetStaticPaths;
 
-const { page } = Astro.props;
-
 const locale = Astro.currentLocale ?? config.site.lang;
 const t = useTranslations(locale);
+
+const posts = await getCollection("posts", postFilter);
+const page = getLocalePage(posts, locale, Astro.params.page, "posts");
+
+if (!page) {
+  return Astro.rewrite(getRelativeLocaleUrl(locale, "404"));
+}
 ---
 
 <Layout title={`${t.pages.postsTitle} | ${config.site.title}`}>

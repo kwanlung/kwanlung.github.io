@@ -1,0 +1,23 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import PostsPage from "../../posts/[...page].astro";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import { postFilter } from "@/utils/postFilter";
+import config from "@/config";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await getCollection(
+    "posts",
+    p => postFilter(p) && p.data.lang === "zh"
+  );
+  return paginate(getSortedPosts(posts), { pageSize: config.posts.perPage });
+}) satisfies GetStaticPaths;
+
+// paginate() only generates the /zh/ route paths; PostsPage re-slices the
+// current locale's posts via getLocalePage. {page} is passed solely to
+// satisfy the props type inferred from getStaticPaths.
+const { page } = Astro.props;
+---
+
+<PostsPage {page} />

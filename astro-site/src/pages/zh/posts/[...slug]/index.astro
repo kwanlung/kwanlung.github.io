@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+import PostPage from "../../../posts/[...slug]/index.astro";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import { getPostSlug } from "@/utils/getPostPaths";
+
+export async function getStaticPaths() {
+  // Drafts are previewable by URL in dev only; never built into production.
+  const posts = await getCollection(
+    "posts",
+    p => p.data.lang === "zh" && (import.meta.env.DEV || !p.data.draft)
+  );
+  return getSortedPosts(posts, { includeDrafts: import.meta.env.DEV }).map(
+    post => ({
+      params: { slug: getPostSlug(post.id, post.filePath) },
+      props: { post },
+    })
+  );
+}
+
+const { post } = Astro.props;
+---
+
+<PostPage {post} />
