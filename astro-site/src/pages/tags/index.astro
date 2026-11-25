@@ -7,14 +7,18 @@ import Main from "@/components/Main.astro";
 import Footer from "@/components/Footer.astro";
 import Tag from "@/components/Tag.astro";
 import { getUniqueTags } from "@/utils/getUniqueTags";
+import { postFilter } from "@/utils/postFilter";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
 
-const posts = await getCollection("posts", ({ data }) => !data.draft);
-const tags = getUniqueTags(posts);
-
 const locale = Astro.currentLocale ?? config.site.lang;
 const t = useTranslations(locale);
+
+const posts = await getCollection(
+  "posts",
+  p => postFilter(p) && p.data.lang === locale
+);
+const tags = getUniqueTags(posts);
 ---
 
 <Layout title={`${t.pages.tagsTitle} | ${config.site.title}`}>

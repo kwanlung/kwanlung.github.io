@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import type { GetStaticPathsOptions } from "astro";
+import TagPage from "../../../tags/[tag]/[...page].astro";
+import { getUniqueTags } from "@/utils/getUniqueTags";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import { slugifyAll } from "@/utils/slugify";
+import { postFilter } from "@/utils/postFilter";
+import config from "@/config";
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const posts = await getCollection(
+    "posts",
+    p => postFilter(p) && p.data.lang === "zh"
+  );
+  const tags = getUniqueTags(posts);
+
+  return tags.flatMap(({ tag, tagName }) => {
+    const tagPosts = getSortedPosts(
+      posts.filter(({ data }) => slugifyAll(data.tags).includes(tag))
+    );
+    return paginate(tagPosts, {
+      params: { tag },
+      props: { tagName },
+      pageSize: config.posts.perPage,
+    });
+  });
+}
+
+// paginate() only generates the /zh/ route paths; TagPage re-slices the
+// current locale's posts via getLocalePage. {page} is passed solely to
+// satisfy the props type inferred from getStaticPaths.
+const { page, tagName } = Astro.props;
+---
+
+<TagPage {page} {tagName} />
